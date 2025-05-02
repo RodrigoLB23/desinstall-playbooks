@@ -1,0 +1,7 @@
+version: v1.0
+name: Desinstalar tree
+
+jobs:
+  - name: Desinstalar tree
+    commands:
+      - sudo apt-get remove tree -y
