@@ -1,7 +1,8 @@
-version: v1.0
-name: Desinstalar tree
-
-jobs:
-  - name: Desinstalar tree
-    commands:
-      - sudo apt-get remove tree -y
+- name: Desinstalar tree
+  hosts: all
+  become: true
+  tasks:
+    - name: Eliminar el paquete tree
+      ansible.builtin.package:
+        name: tree
+        state: absent
